@@ -27,8 +27,6 @@ $(function() {
         }
     }
 
-
-
     /* Smooth scroll */
     $("[data-scroll]").on("click", function(event) {
         event.preventDefault();
@@ -44,15 +42,12 @@ $(function() {
     });
 
 
-
     /* Nav Toggle */
     navToggle.on("click", function(event) {
         event.preventDefault();
 
         nav.toggleClass("show");
     });
-
-
 
     /* Reviews: https://kenwheeler.github.io/slick/ */
     let slider = $("#reviewsSlider");
