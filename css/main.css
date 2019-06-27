@@ -31,8 +31,21 @@ p {
   left: 0;
   z-index: 1000;
 /*  border: 2px solid red;*/
-
 }
+.header.fixed {
+  height: auto;
+
+  position: fixed;
+
+  background-color: #31344e;
+}
+.header.fixed .header__inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  border-bottom: 0;
+}
+
 .header__inner{
   display: flex;
   justify-content: space-between;
@@ -80,15 +93,13 @@ p {
 /* ============== Intro ==============*/
 
 .intro {
-  height: 750px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-
+  height: 750px;
   padding-top: 100px;
 /*padding-bottom: 250px;*/
-  background: #31344e url("img/intro-bg.jpg") center no-repeat;
+  background: #31344e url("../img/intro-bg.jpg") center no-repeat;
   background-size: cover; /*  для браузера mazilla:*/
 
 
@@ -558,6 +569,52 @@ p {
 .copyright__text span {
     color: #fff;
 }
+/* ============== Burger ==============*/
+
+.burger {
+    display: none;
+    padding: 9px 2px;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 28px;
+    height: 3px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    height: 100%;
+
+    background-color: #fff;
+
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.burger__item:before {
+    width: 30px;
+    top: -8px;
+}
+
+.burger__item:after {
+    width: 26px;
+    bottom: -8px;
+}
+
 
 /* ============== Media ==============*/
 
